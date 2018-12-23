@@ -9,7 +9,12 @@ function createWindow () {
   // Create the browser window.
   //mainWindow = new BrowserWindow({width: 800, height: 600})
   // Turn off node integration in Electron: https://github.com/electron/electron-api-demos .
-  mainWindow = new BrowserWindow({width: 800, height: 600, webPreferences: {nodeIntegration: false}})
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {nodeIntegration: false},
+    icon: './Wunderlist_Logo.png'
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL('https://www.wunderlist.com/')
