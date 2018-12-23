@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu, Tray} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -29,6 +29,28 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  mainWindow.on('close', function (event) {
+    if(!app.isQuiting){
+      event.preventDefault();
+      mainWindow.hide();
+    }
+
+    return false;
+  });
+
+  contextMenu = Menu.buildFromTemplate([
+    { label: 'Show App', click:  function(){
+        mainWindow.show();
+    } },
+    { label: 'Quit', click:  function(){
+        app.isQuiting = true;
+        app.quit();
+    } }
+  ]);
+
+  appIcon = new Tray('./Wunderlist_Logo.png');
+  appIcon.setContextMenu(contextMenu);
 }
 
 // This method will be called when Electron has finished
