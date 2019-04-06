@@ -17,7 +17,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL('https://www.wunderlist.com/')
+  mainWindow.loadURL('https://www.wunderlist.com/webapp#/lists/inbox')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
