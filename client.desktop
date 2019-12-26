@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Nextcloud Desktop
+Icon=/home/hans/Install/nextcloud/screenshot.png
+Exec=bash /home/hans/Install/nextcloud/client.sh

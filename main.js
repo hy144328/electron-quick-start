@@ -13,11 +13,11 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {nodeIntegration: false},
-    icon: './Wunderlist_Logo.png'
+    icon: './screenshot.png'
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL('https://www.wunderlist.com/webapp#/lists/inbox')
+  mainWindow.loadURL('https://www.yuyue.de/nextcloud/index.php/apps/tasks/#/collections/all')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -49,7 +49,7 @@ function createWindow () {
     } }
   ]);
 
-  appIcon = new Tray('./Wunderlist_Logo.png');
+  appIcon = new Tray('./screenshot.png');
   appIcon.setContextMenu(contextMenu);
 }
 

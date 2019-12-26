@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Wunderlist
-Icon=/home/hans/Install/wunderlist/Wunderlist_Logo.png
-Exec=bash /home/hans/Install/wunderlist/wunderlist.sh
