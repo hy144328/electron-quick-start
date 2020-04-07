@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=Nextcloud Desktop
+Name=Nextcloud Electron
 Icon=/home/hans/Install/nextcloud/screenshot.png
-Exec=bash /home/hans/Install/nextcloud/client.sh
+Exec=bash -c 'env PATH=/home/hans/Install/node-v10.14.2-linux-x64/bin/:$PATH npm start --prefix /home/hans/Install/nextcloud/'
