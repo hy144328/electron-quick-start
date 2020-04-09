@@ -13,7 +13,7 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {nodeIntegration: false},
-    icon: './screenshot.png'
+    icon: '/usr/share/icons/hicolor/128x128/apps/Nextcloud.png'
   })
 
   // and load the index.html of the app.
@@ -49,7 +49,7 @@ function createWindow () {
     } }
   ]);
 
-  appIcon = new Tray('./screenshot.png');
+  appIcon = new Tray('/usr/share/icons/hicolor/128x128/apps/Nextcloud.png');
   appIcon.setContextMenu(contextMenu);
 }
 
