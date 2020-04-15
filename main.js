@@ -51,6 +51,11 @@ function createWindow () {
 
   appIcon = new Tray('/usr/share/icons/hicolor/128x128/apps/Nextcloud.png');
   appIcon.setContextMenu(contextMenu);
+
+  mainWindow.webContents.on('new-window', function(event, url) {
+    event.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
 }
 
 // This method will be called when Electron has finished
